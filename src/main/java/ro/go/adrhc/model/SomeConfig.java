@@ -14,5 +14,6 @@ public class SomeConfig {
     private String name;
     private List<String> items;
     private Map<String, String> dictionary;
-    private Room room;
+    private Room mainRoom;
+    private List<Room> rooms;
 }

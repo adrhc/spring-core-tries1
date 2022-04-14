@@ -5,6 +5,10 @@ items:
 dictionary:
   key1: value1
   key2: value2
-room:
+mainRoom:
   length: 12
   height: 14.5
+rooms:
+  -
+    length: 12
+    height: 14.5
