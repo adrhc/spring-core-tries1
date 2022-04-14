@@ -1,0 +1,10 @@
+name: gigi
+items:
+  - item1
+  - item2
+dictionary:
+  key1: value1
+  key2: value2
+room:
+  length: 12
+  height: 14.5

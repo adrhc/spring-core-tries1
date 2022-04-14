@@ -4,8 +4,8 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.example</groupId>
-  <artifactId>adrhc-spring-core</artifactId>
+  <groupId>ro.go.adrhc</groupId>
+  <artifactId>spring-core-tries1</artifactId>
   <version>1.0-SNAPSHOT</version>
 
   <name>adrhc-spring-core</name>
@@ -25,6 +25,13 @@
       <artifactId>lombok</artifactId>
       <version>1.18.22</version>
       <scope>provided</scope>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.dataformat</groupId>
+      <artifactId>jackson-dataformat-yaml</artifactId>
+      <version>2.13.2</version>
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/org.springframework/spring -->
