@@ -11,7 +11,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
-import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.support.ResourcePatternResolver;
 
 import ro.go.adrhc.boot.CommandLineRunner;
 import ro.go.adrhc.boot.YamlPropertyLoaderFactory;
@@ -28,8 +29,8 @@ public class App {
     private static final ObjectMapper yamlMapper = new ObjectMapper(new YAMLFactory());
 
     @Bean
-    public SomeConfig someConfig() throws IOException {
-        ClassPathResource resource = new ClassPathResource("some-config.yml");
+    public SomeConfig someConfig(ResourcePatternResolver resourcePatternResolver) throws IOException {
+        Resource resource = resourcePatternResolver.getResource("some-config.yml");
         return yamlMapper.readValue(resource.getInputStream(), SomeConfig.class);
     }
 
